@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A secure password manager for saving and managing your passwords." />
+  <title>SafeKey™ Password Manager</title>
+  <link rel="stylesheet" href="background.css" />
+</head>
+<body>
+  <header id="main-header">
+    <img src="SafeKey.png" alt="SafeKey Logo" id="logo" />
+    <h1 id="app-title">SafeKey™ Password Manager</h1>
+  </header>
+
+  <div id="app">
+    <!-- Login and Create Account Section -->
+    <section id="auth-section">
+      <form id="login-form">
+        <h2>Login</h2>
+        <label for="login-username">Username:</label>
+        <input type="text" id="login-username" required />
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" required />
+        <button type="submit" class="form-button">Login</button>
+      </form>
+
+      <form id="create-account-form">
+        <h2>Create Account</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" required />
+        <button type="submit" class="form-button">Create Account</button>
+      </form>
+    </section>
+
+    <!-- Password Manager Section -->
+    <section id="password-manager-section" style="display: none;">
+      <h2 style="color: white;">Password Manager</h2>
+      <p style="color: white;">Welcome, <span id="logged-in-user"></span>!</p>
+
+      <!-- Save New Password Form -->
+      <form id="add-password-form">
+        <h3>Save a New Password</h3>
+        <label for="site">Website:</label>
+        <input type="text" id="site" name="site" required />
+        <label for="site-username">Username:</label>
+        <input type="text" id="site-username" name="username" required />
+        <label for="site-password">Password:</label>
+        <input type="password" id="site-password" name="password" required />
+
+        <!-- Password Strength Checker -->
+        <button type="button" id="check-strength" class="form-button" style="margin-bottom: 10px;">Check Password Strength</button>
+        <p id="password-strength" style="margin-bottom: 15px;"></p>
+
+        <button type="submit" class="form-button">Save Password</button>
+      </form>
+
+      <!-- Show Saved Passwords -->
+      <div id="password-list">
+        <h3 style="color: red;">Saved Passwords</h3>
+        <ul id="passwords-display" style="list-style: none; padding-left: 0;"></ul>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

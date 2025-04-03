@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "username": "testuser",
+      "password": "123456",
+      "id": "5843"
+    },
+    {
+      "username": "admin",
+      "password": "admin123",
+      "id": "a7ec"
+    }
+  ],
+  "passwords": [
+    {
+      "id": "d35b",
+      "site": "instagram.com",
+      "siteUsername": "Tim_James",
+      "sitePassword": "Tim12345",
+      "owner": "testuser"
+    }
+  ]
+}
